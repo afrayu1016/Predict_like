@@ -28,14 +28,7 @@ conda deactivate "your_env"
 ```
 pip install -r requirements.txt
 ```
-3. 確認訓練及測試檔案儲存位置，位於dataset folder
-```
-./dataset/ - intern_homework_train_dataset.csv
-           - intern_homework_public_test_dataset.csv
-           - intern_homework_private_test_dataset.csv
-    
-```
-4. 安裝ckiptagger 套件於 ./data下
+3. 安裝ckiptagger 套件於 ./data下
 參考 https://github.com/ckiplab/ckiptagger/wiki/Chinese-README
 ```
 ./data/ - embedding_character/
@@ -62,15 +55,22 @@ pip install -r requirements.txt
            - model_asbc_Att-0_BiLSTM-cross-2-500_batch128-run1.meta
     
 ```
+4. 確認訓練及測試檔案儲存位置，位於dataset folder
+```
+./dataset/ - intern_homework_train_dataset.csv
+           - intern_homework_public_test_dataset.csv
+           - intern_homework_private_test_dataset.csv
+    
+```
 5. Data file
 >File descriptions:
 > * intern_homework_train_dataset.csv: 共50000筆訓練資料，內含真實like_count_24h數值
 >  * intern_homework_public_test_dataset.csv: 共10000筆公開測試資料，內含真實like_count_24h數值
 >  * intern_homework_private_test_dataset.csv: 共10000筆非公開測試資料，不含真實like_count_24h數值
 
-6. Run XHY_Dcard_intern_hw 並預測private test data結果，此結果會儲存在_output folder。
+6. Run predict_likes.py 並預測private test data結果，此結果會儲存在_output folder。
 ```
-python XHY_Dcard_intern_hw.py 
+python predict_likes.py 
 ```
 
 
